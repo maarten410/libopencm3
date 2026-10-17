@@ -57,6 +57,7 @@ void i2c_set_rx_buffer(uint32_t i2c, uint8_t *buffer, uint8_t len)
 	I2C_RXDMAXCNT(i2c) = len;
 	I2C_RXDLIST(i2c) = 0;
 }
+
 /** @brief Select GPIO pins to be used by this peripheral.
  *
  * Configures GPIO pins assigned to SCL and SDA signals. These pins are only occupied
@@ -75,7 +76,7 @@ void i2c_set_rx_buffer(uint32_t i2c, uint8_t *buffer, uint8_t len)
 void i2c_select_pins(uint32_t i2c, uint32_t scl_port, uint32_t scl_pin, uint32_t sda_port, uint32_t sda_pin)
 {
 	if (scl_pin != GPIO_UNCONNECTED) {
-		I2C_PSELSCL(i2c) =  __PORT2PSEL(scl_port) | __GPIO2PIN(scl_pin);
+		I2C_PSELSCL(i2c) = __PORT2PSEL(scl_port) | __GPIO2PIN(scl_pin);
 	} else {
 		I2C_PSELSCL(i2c) = GPIO_UNCONNECTED;
 	}
