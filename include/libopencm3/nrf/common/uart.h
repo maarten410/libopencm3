@@ -131,14 +131,16 @@ void uart_disable(uint32_t uart);
 void uart_set_baudrate(uint32_t uart, enum uart_baud br);
 void uart_set_parity(uint32_t uart, int parity);
 void uart_set_flow_control(uint32_t uart, int flow);
-void uart_send_stop(uint32_t uart);
-
 void uart_start_tx(uint32_t uart);
 void uart_stop_tx(uint32_t uart);
 void uart_send(uint32_t uart, uint16_t byte);
+void uart_send_blocking(uint32_t uart, uint16_t byte);
 void uart_start_rx(uint32_t uart);
 void uart_stop_rx(uint32_t uart);
+void uart_wait_recv_ready(uint32_t uart);
+void uart_wait_send_done(uint32_t uart);
 uint16_t uart_recv(uint32_t uart);
+uint16_t uart_recv_blocking(uint32_t uart);
 
 END_DECLS
 

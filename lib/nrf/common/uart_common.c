@@ -29,8 +29,11 @@
  * along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#include "libopencm3/nrf/common/uart.h"
 #include <libopencm3/nrf/uart.h>
 #include <libopencm3/nrf/gpio.h>
+#include <stdbool.h>
+#include <stdint.h>
 /**@{*/
 
 /** @brief Enable the peripheral
@@ -78,6 +81,12 @@ void uart_send(uint32_t uart, uint16_t byte)
 	UART_TXD((uart)) = byte;
 }
 
+void uart_send_blocking(uint32_t uart, uint16_t data)
+{
+	uart_send(uart, data);
+	uart_wait_send_done(uart);
+}
+
 void uart_stop_tx(uint32_t uart)
 {
 	PERIPH_TRIGGER_TASK(UART_TASK_STOPTX((uart)));
@@ -93,9 +102,27 @@ uint16_t uart_recv(uint32_t uart)
 	return UART_RXD(uart);
 }
 
+uint16_t uart_recv_blocking(uint32_t uart)
+{
+	uart_wait_recv_ready(uart);
+	return uart_recv(uart);
+}
+
 void uart_stop_rx(uint32_t uart)
 {
 	PERIPH_TRIGGER_TASK(UART_TASK_STOPRX((uart)));
+}
+
+void uart_wait_recv_ready(uint32_t uart)
+{
+	while (!UART_EVENT_RXDRDY(uart));
+	UART_EVENT_RXDRDY(uart) = 0;
+}
+
+void uart_wait_send_done(uint32_t uart)
+{
+	while (!UART_EVENT_TXDRDY(uart));
+	UART_EVENT_TXDRDY(uart) = 0;
 }
 /**@}*/
 
