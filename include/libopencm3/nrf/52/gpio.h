@@ -38,8 +38,8 @@
  * @{
  */
 /** GPIO port */
-#define GPIOP0				(GPIOP_BASE)
-#define GPIOP1				(GPIOP_BASE + 0x300)
+#define GPIOP0				(GPIO_BASE)
+#define GPIOP1				(GPIO_BASE + 0x300)
 
 /**@}*/
 
