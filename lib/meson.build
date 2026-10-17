@@ -42,3 +42,6 @@ endif
 if target_platform == 'lm4f' or target_platform == 'all'
 	subdir('lm4f')
 endif
+if target_platform.startswith('nrf') or target_platform == 'all'
+	subdir('nrf')
+endif

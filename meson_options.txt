@@ -12,6 +12,8 @@ option(
 		'stm32g4',
 		'stm32l4',
 		'lm4f',
+		'nrf51',
+		'nrf52',
 	],
 	value: 'all',
 	description: 'The hardware platform you wish to target'
