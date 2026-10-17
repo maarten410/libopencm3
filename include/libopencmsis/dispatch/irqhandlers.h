@@ -67,6 +67,10 @@
 
 #elif defined(SWM050)
 #	include <libopencmsis/swm050/irqhandlers.h>
+#elif defined(NRF51)
+#  include <libopencmsis/nrf/51/irqhandlers.h>
+#elif defined(NRF52)
+#  include <libopencmsis/nrf/52/irqhandlers.h>
 #else
 #	warning"no chipset defined; user interrupts are not redirected"
 
