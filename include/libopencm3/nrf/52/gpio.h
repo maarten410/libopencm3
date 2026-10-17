@@ -32,6 +32,14 @@
 
 #pragma once
 
-#include <libopencm3/nrf/common/gpio.h>
+#include <libopencm3/nrf/common/gpio_common.h>
 
+/** @addtogroup gpio_port_id GPIO ports
+ * @{
+ */
+/** GPIO port */
+#define GPIOP0				(GPIOP_BASE)
+#define GPIOP1				(GPIOP_BASE + 0x300)
+
+/**@}*/
 

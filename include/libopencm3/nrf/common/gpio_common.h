@@ -31,14 +31,6 @@
 #include <libopencm3/nrf/memorymap.h>
 /**@{*/
 
-/** @addtogroup gpio_port_id GPIO ports
- * @{
- */
-/** GPIO port */
-#define GPIO				(GPIO_BASE)
-
-/**@}*/
-
 #define GPIO_OUT			MMIO32(GPIO_BASE + 0x504)
 #define GPIO_OUTSET		MMIO32(GPIO_BASE + 0x508)
 #define GPIO_OUTCLR		MMIO32(GPIO_BASE + 0x50C)
@@ -173,38 +165,38 @@
 @ingroup gpio_defines
 
 @{*/
-#define GPIO0								(1 << 0)
-#define GPIO1								(1 << 1)
-#define GPIO2								(1 << 2)
-#define GPIO3								(1 << 3)
-#define GPIO4								(1 << 4)
-#define GPIO5								(1 << 5)
-#define GPIO6								(1 << 6)
-#define GPIO7								(1 << 7)
-#define GPIO8								(1 << 8)
-#define GPIO9								(1 << 9)
-#define GPIO10								(1 << 10)
-#define GPIO11								(1 << 11)
-#define GPIO12								(1 << 12)
-#define GPIO13								(1 << 13)
-#define GPIO14								(1 << 14)
-#define GPIO15								(1 << 15)
-#define GPIO16								(1 << 16)
-#define GPIO17								(1 << 17)
-#define GPIO18								(1 << 18)
-#define GPIO19								(1 << 19)
-#define GPIO20								(1 << 20)
-#define GPIO21								(1 << 21)
-#define GPIO22								(1 << 22)
-#define GPIO23								(1 << 23)
-#define GPIO24								(1 << 24)
-#define GPIO25								(1 << 25)
-#define GPIO26								(1 << 26)
-#define GPIO27								(1 << 27)
-#define GPIO28								(1 << 28)
-#define GPIO29								(1 << 29)
-#define GPIO30								(1 << 30)
-#define GPIO31								(1 << 31)
+#define GPIOPIN0							(1 << 0)
+#define GPIOPIN1							(1 << 1)
+#define GPIOPIN2							(1 << 2)
+#define GPIOPIN3							(1 << 3)
+#define GPIOPIN4							(1 << 4)
+#define GPIOPIN5							(1 << 5)
+#define GPIOPIN6							(1 << 6)
+#define GPIOPIN7							(1 << 7)
+#define GPIOPIN8							(1 << 8)
+#define GPIOPIN9							(1 << 9)
+#define GPIOPIN10							(1 << 10)
+#define GPIOPIN11							(1 << 11)
+#define GPIOPIN12							(1 << 12)
+#define GPIOPIN13							(1 << 13)
+#define GPIOPIN14							(1 << 14)
+#define GPIOPIN15							(1 << 15)
+#define GPIOPIN16							(1 << 16)
+#define GPIOPIN17							(1 << 17)
+#define GPIOPIN18							(1 << 18)
+#define GPIOPIN19							(1 << 19)
+#define GPIOPIN20							(1 << 20)
+#define GPIOPIN21							(1 << 21)
+#define GPIOPIN22							(1 << 22)
+#define GPIOPIN23							(1 << 23)
+#define GPIOPIN24							(1 << 24)
+#define GPIOPIN25							(1 << 25)
+#define GPIOPIN26							(1 << 26)
+#define GPIOPIN27							(1 << 27)
+#define GPIOPIN28							(1 << 28)
+#define GPIOPIN29							(1 << 29)
+#define GPIOPIN30							(1 << 30)
+#define GPIOPIN31							(1 << 31)
 #define GPIO_ALL							0xffffffff
 /**@}*/
 

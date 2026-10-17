@@ -32,6 +32,14 @@
 
 #pragma once
 
-#include <libopencm3/nrf/common/gpio.h>
+#include <libopencm3/nrf/common/gpio_common.h>
+#include <libopencm3/nrf/51/memorymap.h>
 
+/** @addtogroup gpio_port_id GPIO ports
+ * @{
+ */
+/** GPIO port */
+#define GPIO				(GPIO_BASE)
+
+/**@}*/
 

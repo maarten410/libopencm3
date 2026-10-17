@@ -83,6 +83,7 @@ libnrf51 = static_library(
 opencm3_nrf51 = declare_dependency(
 	compile_args: libnrf51_compile_args,
 	include_directories: common_includes,
+	dependencies: nrf51_cm3,
 	link_with: libnrf51,
 	link_args: libnrf51_link_args,
 )
