@@ -42,7 +42,7 @@ OBJS += ppi.o
 OBJS += rtc.o
 OBJS += radio_common.o ./radio.o
 OBJS += timer.o
-OBJS += uart.o
+OBJS += uart.o uart_common.o
 
 VPATH += ../../cm3:../common
 

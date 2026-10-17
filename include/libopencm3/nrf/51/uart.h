@@ -37,3 +37,18 @@
 #include <libopencm3/nrf/periph.h>
 #include <libopencm3/nrf/common/uart.h>
 
+/**@{*/
+
+BEGIN_DECLS
+
+void uart_configure(uint32_t uart,
+uint32_t rx_pin, uint32_t tx_pin,
+uint32_t cts_pin, uint32_t rts_pin,
+enum uart_baud br, bool enable_parity);
+void uart_set_pins(uint32_t uart,
+uint32_t rx_pin, uint32_t tx_pin,
+uint32_t cts_pin, uint32_t rts_pin);
+
+END_DECLS
+
+/**@}*/

@@ -128,9 +128,6 @@ BEGIN_DECLS
 
 void uart_enable(uint32_t uart);
 void uart_disable(uint32_t uart);
-void uart_configure(uint32_t uart,
-uint32_t txd, uint32_t rxd, uint32_t rts, uint32_t cts,
-enum uart_baud br, bool enable_parity);
 void uart_set_baudrate(uint32_t uart, enum uart_baud br);
 void uart_set_parity(uint32_t uart, int parity);
 void uart_set_flow_control(uint32_t uart, int flow);
@@ -142,7 +139,6 @@ void uart_send(uint32_t uart, uint16_t byte);
 void uart_start_rx(uint32_t uart);
 void uart_stop_rx(uint32_t uart);
 uint16_t uart_recv(uint32_t uart);
-void uart_set_pins(uint32_t uart, uint32_t rx, uint32_t tx, uint32_t cts, uint32_t rts);
 
 END_DECLS
 

@@ -37,6 +37,7 @@ nrf52_cm3 = declare_dependency(
 # Sources specific to the 52 series
 libnrf52_sources = files(
 	'i2c.c',
+	'uart.c',
 )
 
 libnrf52_common_args = [

@@ -39,6 +39,7 @@ libnrf51_sources = files(
 	'clock.c',
 	'radio.c',
 	'i2c.c',
+	'uart.c',
 )
 
 libnrf51_common_args = [
