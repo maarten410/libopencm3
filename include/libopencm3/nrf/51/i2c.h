@@ -37,4 +37,12 @@
 #include <libopencm3/nrf/periph.h>
 #include <libopencm3/nrf/common/i2c.h>
 
+/**@{*/
 
+BEGIN_DECLS
+
+void i2c_select_pins(uint32_t i2c, uint32_t scl_pin, uint32_t sda_pin);
+
+END_DECLS
+
+/** @} */

@@ -37,7 +37,8 @@ nrf51_cm3 = declare_dependency(
 # Sources specific to the 51 series
 libnrf51_sources = files(
 	'clock.c',
-	'radio.c'
+	'radio.c',
+	'i2c.c',
 )
 
 libnrf51_common_args = [

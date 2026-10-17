@@ -97,6 +97,7 @@ BEGIN_DECLS
 
 void i2c_set_tx_buffer(uint32_t i2c, const uint8_t * buffer, uint8_t len);
 void i2c_set_rx_buffer(uint32_t i2c, uint8_t * buffer, uint8_t len);
+void i2c_select_pins(uint32_t i2c, uint32_t scl_port, uint32_t scl_pin, uint32_t sda_port, uint32_t sda_pin);
 
 END_DECLS
 

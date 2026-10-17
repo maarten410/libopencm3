@@ -26,3 +26,7 @@
 
 #include <libopencm3/nrf/common/periph.h>
 
+/** Set bit 5 for PSEL registers when port is not P0, only works correctly if the 
+ * base addresses for the ports are used.
+ */
+#define __PORT2PSEL(x)      (((uint32_t)x) == GPIO_BASE ? 0: 1<<5)
